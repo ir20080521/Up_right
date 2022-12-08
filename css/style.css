@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --MainBlueColor: #006699;
+  --GrayColor: #666666;
+  --LineColor: #ccc;
+  --AColor: #007bff;
+  --GreenColor: #009999;
+  --BackgroundColor: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.body {
+  display: flex;
+  align-items: flex-start;
+}
+
+.active {
+  background-color: var(--BackgroundColor);
+}
+
+aside {
+  width: 300px;
+  height: 100vh;
+  position: relative;
+}
+
+aside > h1 {
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 4rem 3rem;
+  background-color: var(--MainBlueColor);
+}
+
+aside > ul {
+  list-style-type: none;
+  margin-top: 4rem;
+  position: absolute;
+  top: 18rem;
+  width: 100%;
+}
+
+.side_link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--MainBlueColor);
+}
+
+.side_link > li {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.side_link:first-child > li {
+  padding: 20px 35px;
+}
+
+.side_link > i {
+  font-size: 3rem;
+  margin-left: -10px;
+  visibility: hidden;
+}
+
+.side_link:first-child > i {
+  visibility: visible;
+}
+
+.side_link:hover li {
+  background-color: var(--BackgroundColor);
+  padding: 20px 35px;
+}
+
+.side_link:hover i {
+  visibility: visible;
+}
+
+aside > p {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.menu {
+  position: fixed;
+  top: 3rem;
+  font-size: 1.5rem;
+  opacity: 0.9;
+  cursor: pointer;
+  color: white;
+  background-color: var(--MainBlueColor);
+  padding: 7px 13px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+  z-index: 999;
+}
+
+main {
+  border: 2px solid green;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.home_section {
+  border: 1px solid red;
+  display: flex;
+}
+
+.bg_side {
+  width: 400px;
+  position: relative;
+  background-image: url(https://templatemo.com/templates/templatemo_555_upright/img/img-01.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.home_content {
+  border: 1px solid black;
+  width: 100%;
+  padding: 3rem;
+}
+
+.home_content > h1 {
+  margin-bottom: 2rem;
+  color: var(--MainBlueColor);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.line {
+  height: 3px;
+  background-color: var(--LineColor);
+}
+
+.gallery_section {
+  height: 600px;
+}
+
+.home_introduction {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.left_home,
+.right_home {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.left_home > i,
+.right_home > i {
+  padding: 1rem;
+  border: 1px solid var(--LineColor);
+  color: var(--MainBlueColor);
+}
+
+.left_home > p,
+.right_home > p {
+  color: var(--GrayColor);
+}
+
+.right_home > button {
+  padding: 10px 20px;
+  background-color: var(--MainBlueColor);
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+
+.divider {
+  max-width: 300px;
+  height: 1px;
+  background-color: var(--MainBlueColor);
+  margin: 1rem auto;
+}
+
+.timeline_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.left_timeline > article {
+  display: flex;
+  align-items: flex-start;
+  margin: 3rem 0;
+  gap: 1.5rem;
+  max-width: 700px;
+}
+
+.left_timeline > article > i {
+  color: var(--MainBlueColor);
+}
+
+.timeline_info h3 {
+  font-weight: 400;
+  color: var(--MainBlueColor);
+  margin-bottom: 1rem;
+}
+
+.timeline_info > p {
+  color: var(--GrayColor);
+}
+
+@media only screen and (max-width: 1200px) {
+  aside {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .home_section {
+    flex-direction: column;
+  }
+
+  .bg_side {
+    width: 100%;
+    background-size: cover;
+    background-position: center 100%;
+    height: 300px;
+  }
+  .home_introduction {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right_timeline {
+    display: none;
+  }
+
+}
